@@ -1,0 +1,160 @@
+
+
+.menu_button{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+    z-index: 10;
+}
+.menu_button i{
+    position: absolute;
+    
+    left: 10px;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.menu_button i:nth-of-type(1){
+    top: 20px;
+}
+.menu_button i:nth-of-type(2){
+    top: 30px;
+}
+.menu_button i:nth-of-type(3){
+    top: 40px;
+}
+
+.menu_button.active i:nth-of-type(1){
+    transform:translateY(10px) rotate(45deg);
+}
+.menu_button.active i:nth-of-type(2){
+    opacity: 0;
+}
+.menu_button.active i:nth-of-type(3){
+    transform:translateY(-10px) rotate(-45deg);
+}
+
+.menu_container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: silver;
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu_container.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu_container h1{
+    text-align: center;
+
+}
+
+.menu_item{
+    width: 480px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.menu_item ul{
+    margin: 0 30px;
+}
+
+.menu_item ul li{
+    margin-bottom: 20px;
+}
+
+img{
+    width: 540px;
+}
+
+.slider{
+    width: 540px;
+    margin: 20px auto 0;
+    padding: 0;
+}
+
+.slide_button{
+    width: 540px;
+    margin: 0 auto;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+#prev,
+#next{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+    Border-radius:50%;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+#prev:hover,
+#next:hover{
+    background-color: rgb(228, 228, 228)
+}
+
+#modal-open,
+#modal-close{
+    width: 320px;
+    margin: 40px auto;
+    border:  1px solid blue;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#modal-close{
+    width: 200px;
+    margin: 10px auto;
+}
+
+#modal-bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-bg.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#modal-container{
+    width: 350px;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-container.active{
+    opacity: 1;
+    pointer-events: auto; 
+}
