@@ -158,3 +158,28 @@ img{
     opacity: 1;
     pointer-events: auto; 
 }
+
+.accordion{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.accordion_item{
+    border:  1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.accordion_header{
+    background-color: #ccc;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.accordion_content{
+    padding: 8px;
+    display: none;
+}
+
+.accordion_content.active{
+    display: block;
+}
