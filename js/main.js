@@ -1,5 +1,5 @@
 
-//トグルメニュー
+//ハンバーガーメニュー
 {
     const btn = document.querySelector('.menu_button');
     const menu_container = document.querySelector('.menu_container');
@@ -53,4 +53,22 @@
         modal_container.classList.remove('active')
         modal_bg.classList.remove('active')
     });
+}
+
+//トグルメニュー
+{
+    const accordion =document.querySelectorAll('.accordion_header');
+    
+
+
+    accordion.forEach((selected) =>{
+        selected.addEventListener('click',() => {
+            let content = selected.nextElementSibling;
+            content.classList.toggle('active');
+            let icon = selected.querySelector('.accordion_icon')
+            icon.classList.toggle('active')
+        });
+    })
+
+    
 }

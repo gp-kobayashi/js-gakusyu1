@@ -158,3 +158,51 @@ img{
     opacity: 1;
     pointer-events: auto; 
 }
+
+.accordion{
+    width: 400px;
+    margin: 100px auto;
+}
+
+.accordion_item{
+    border:  1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.accordion_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.accordion_icon{
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.accordion_icon i{
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 2px;
+    background: black;
+}
+
+.accordion_icon i:nth-of-type(1){
+    transform: rotate(90deg);
+}
+
+.accordion_icon.active i:nth-of-type(1){
+    transform: rotate(0deg);
+}
+
+.accordion_content{
+    padding: 8px;
+    display: none;
+}
+
+.accordion_content.active{
+    display: block;
+}
