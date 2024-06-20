@@ -58,14 +58,15 @@
 //トグルメニュー
 {
     const accordion =document.querySelectorAll('.accordion_header');
-    const icon =document.querySelector('.accordion_header :last-child');
+    
 
 
     accordion.forEach((selected) =>{
         selected.addEventListener('click',() => {
             let content = selected.nextElementSibling;
             content.classList.toggle('active');
-            icon.classList.toggle('active');
+            let icon = selected.querySelector('.accordion_icon')
+            icon.classList.toggle('active')
         });
     })
 
