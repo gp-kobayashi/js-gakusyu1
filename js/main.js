@@ -11,18 +11,21 @@
 }
 
 
-//スライド
+//スライドとモーダルウィンドウのテキスト
 {
     const images = ['img/01.jpg','img/02.jpg','img/03.jpg','img/04.jpg']
     const slideImg = document.getElementById('slide_img');
     const prev =document.getElementById('prev');
     const next =document.getElementById('next');
+    const texts=['1枚目の画像です','２枚目の画像です','３枚目の画像です','4枚目の画像です']
+    const modal_text= document.getElementById('modal_text')
     let current = 0;
 
     next.addEventListener('click',function(){
         if(current + 1 < images.length){
             current++;
             slideImg.src = images[current];
+            modal_text.textContent=texts[current]
         }
     });
 
@@ -30,9 +33,12 @@
         if(current > 0){
             current--;
             slideImg.src = images[current];
+            modal_text.textContent=texts[current]
         }
     });
 }
+
+    
 
 //モーダルウィンドウ
 {
