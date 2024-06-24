@@ -19,7 +19,7 @@
         {image:'img/03.jpg',text:'3枚目の画像です'},
         {image:'img/04.jpg',text:'4枚目の画像です'},
     ];
-    const slideImg = document.getElementById('slide_img');
+    const slide_img = document.getElementById('slide_img');
     const prev =document.getElementById('prev');
     const next =document.getElementById('next');
     const modal_text= document.getElementById('modal_text')
@@ -28,7 +28,7 @@
     next.addEventListener('click',function(){
         if(current + 1 < images_texts.length){
             current++;
-            slideImg.src = images_texts[current].image;
+            slide_img.src = images_texts[current].image;
             modal_text.textContent= images_texts[current].text;
         }
     });
@@ -36,7 +36,7 @@
     prev.addEventListener('click',function(){
         if(current > 0){
             current--;
-            slideImg.src = images_texts[current].image;
+            slide_img.src = images_texts[current].image;
             modal_text.textContent= images_texts[current].text;
         }
     });
@@ -46,10 +46,10 @@
 
 //モーダルウィンドウ
 {
-    const open =document.getElementById('modal-open');
-    const modal_container =document.getElementById('modal-container');
-    const modal_bg =document.getElementById('modal-bg');
-    const close =document.getElementById('modal-close');
+    const open =document.getElementById('modal_open');
+    const modal_container =document.getElementById('modal_container');
+    const modal_bg =document.getElementById('modal_bg');
+    const close =document.getElementById('modal_close');
 
     open.addEventListener('click',() => {
         modal_container.classList.add('active')
@@ -69,14 +69,12 @@
 {
     const accordion =document.querySelectorAll('.accordion_header');
     
-
-
     accordion.forEach((selected) =>{
         selected.addEventListener('click',() => {
             let content = selected.nextElementSibling;
             content.classList.toggle('active');
-            let icon = selected.querySelector('.accordion_icon')
-            icon.classList.toggle('active')
+            let icon = selected.querySelector('.accordion_icon');
+            icon.classList.toggle('active');
         });
     })
 

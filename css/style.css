@@ -83,7 +83,6 @@ img{
 .slider{
     width: 540px;
     margin: 20px auto 0;
-    padding: 0;
 }
 
 .slide_button{
@@ -98,7 +97,6 @@ img{
 #prev,
 #next{
     width: 30px;
-    height: 30px;
     background-color: #fff;
     text-align: center;
     line-height: 30px;
@@ -113,8 +111,8 @@ img{
     background-color: rgb(228, 228, 228)
 }
 
-#modal-open,
-#modal-close{
+#modal_open,
+#modal_close{
     width: 320px;
     margin: 40px auto;
     border:  1px solid blue;
@@ -122,12 +120,16 @@ img{
     text-align: center;
     cursor: pointer;
 }
-#modal-close{
+#modal_close{
     width: 200px;
     margin: 10px auto;
 }
 
-#modal-bg{
+#modal_text{
+    text-align: center;
+}
+
+#modal_bg{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -138,12 +140,12 @@ img{
     pointer-events: none;
 }
 
-#modal-bg.active{
+#modal_bg.active{
     opacity: 1;
     pointer-events: auto;
 }
 
-#modal-container{
+#modal_container{
     width: 350px;
     position: absolute;
     top: 160px;
@@ -156,7 +158,7 @@ img{
     pointer-events: none;
 }
 
-#modal-container.active{
+#modal_container.active{
     opacity: 1;
     pointer-events: auto; 
 }
